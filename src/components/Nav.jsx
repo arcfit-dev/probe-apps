@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { ProbeLogo } from './ProbeLogo';
 import Button from './Button';
+import { DASH_URL, DEMO_URL } from '../constants/links';
 import { fadeDown, viewportOnce } from '../hooks/useAnimations';
 
 const links = [['Problem', 'problem'], ['Solution', 'solution'], ['Features', 'features'], ['Pricing', 'pricing']];
@@ -36,8 +37,8 @@ export default function Nav() {
           </nav>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Button variant="link">Sign in</Button>
-          <Button variant="primary" icon={<ArrowRight size={18} />}>Book a demo</Button>
+          <Button variant="link" href={DASH_URL}>Sign in</Button>
+          <Button variant="primary" icon={<ArrowRight size={18} />} href={DEMO_URL}>Book a demo</Button>
         </div>
       </div>
     </motion.header>

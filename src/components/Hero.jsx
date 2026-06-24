@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Play, MessageCircle, RefreshCw, BarChart2, Briefcase, Inbox, Zap, PhoneMissed, Globe, Mail } from 'lucide-react';
 import Button from './Button';
+import { DASH_URL, DEMO_URL } from '../constants/links';
 import Badge from './Badge';
 import { fadeUp, slideLeft, staggerContainer, staggerSlow, viewportOnce } from '../hooks/useAnimations';
 
@@ -72,8 +73,8 @@ export default function Hero() {
             Capture. Engage. Convert. <span style={{ color: 'var(--text-brand)' }}>Automatically.</span>
           </p>
           <div style={{ display: 'flex', gap: 12, marginBottom: 30 }}>
-            <Button variant="primary" size="xl" icon={<ArrowRight size={20} />}>Book your free demo</Button>
-            <Button variant="grey" size="xl" iconLeft={<Play size={20} />}>See it in action</Button>
+            <Button variant="primary" size="xl" icon={<ArrowRight size={20} />} href={DEMO_URL}>Book your free demo</Button>
+            <Button variant="grey" size="xl" iconLeft={<Play size={20} />} href={DASH_URL}>See it in action</Button>
           </div>
           <motion.div variants={staggerContainer} initial="hidden" animate="visible" style={{ display: 'flex', gap: 18, flexWrap: 'wrap' }}>
             {pillars.map(([Icon, t]) => (

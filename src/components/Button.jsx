@@ -14,19 +14,36 @@ const sizes = {
   xl: { padding: '16px 28px', fontSize: '16px' },
 };
 
-export default function Button({ children, variant = 'primary', size = 'md', icon, iconLeft, onClick, style, full }) {
+export default function Button({ children, variant = 'primary', size = 'md', icon, iconLeft, onClick, href, style, full }) {
+  const sharedStyle = {
+    display: 'inline-flex', alignItems: 'center', gap: '8px',
+    border: 'none', cursor: 'pointer', fontFamily: 'var(--font-sans)',
+    fontWeight: 600, borderRadius: '8px', whiteSpace: 'nowrap', textDecoration: 'none',
+    width: full ? '100%' : undefined, justifyContent: full ? 'center' : undefined,
+    ...variants[variant], ...sizes[size], ...style,
+  };
+
+  if (href) {
+    return (
+      <motion.a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        whileHover={{ scale: 1.03, filter: 'brightness(1.08)' }}
+        whileTap={buttonTap}
+        style={sharedStyle}
+      >
+        {iconLeft}{children}{icon}
+      </motion.a>
+    );
+  }
+
   return (
     <motion.button
       whileHover={{ scale: 1.03, filter: 'brightness(1.08)' }}
       whileTap={buttonTap}
       onClick={onClick}
-      style={{
-        display: 'inline-flex', alignItems: 'center', gap: '8px',
-        border: 'none', cursor: 'pointer', fontFamily: 'var(--font-sans)',
-        fontWeight: 600, borderRadius: '8px', whiteSpace: 'nowrap',
-        width: full ? '100%' : undefined, justifyContent: full ? 'center' : undefined,
-        ...variants[variant], ...sizes[size], ...style,
-      }}
+      style={sharedStyle}
     >
       {iconLeft}{children}{icon}
     </motion.button>

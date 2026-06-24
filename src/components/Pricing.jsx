@@ -3,6 +3,7 @@ import { Send, Star, Briefcase, Clock, Calendar, Unlock, Headphones, Shield } fr
 import SectionHead from './SectionHead';
 import Badge from './Badge';
 import Button from './Button';
+import { DASH_URL } from '../constants/links';
 import { fadeUp, staggerContainer, viewportOnce } from '../hooks/useAnimations';
 
 const plans = [
@@ -46,7 +47,7 @@ export default function Pricing() {
                   <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 22 }}>Yet to be announced</div>
                   <div style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 4 }}>We're working on something exciting for you.</div>
                 </div>
-                <Button variant={p.variant} size="lg" full style={{ marginTop: 'auto' }}>Join waitlist</Button>
+                <Button variant={p.variant} size="lg" full style={{ marginTop: 'auto' }} href={DASH_URL}>Join waitlist</Button>
               </div>
             </motion.div>
           ))}

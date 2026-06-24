@@ -4,6 +4,7 @@ import { Zap, Globe, Home, Calendar, ArrowRight, ChevronLeft, Video, Phone, Send
 import { ProbeMark } from './ProbeLogo';
 import SectionHead from './SectionHead';
 import Button from './Button';
+import { DASH_URL } from '../constants/links';
 import { fadeUp, slideLeft, slideRight, staggerContainer, viewportOnce } from '../hooks/useAnimations';
 
 const script = [
@@ -130,7 +131,7 @@ export default function WhatsAppDemo() {
             ))}
           </motion.div>
           <div style={{ marginTop: 28 }}>
-            <Button variant="primary" size="lg" icon={<ArrowRight size={18} />}>Try it on your leads</Button>
+            <Button variant="primary" size="lg" icon={<ArrowRight size={18} />} href={DASH_URL}>Try it on your leads</Button>
           </div>
         </motion.div>
 
