@@ -12,10 +12,10 @@ const probs = [
 
 export default function Problem() {
   return (
-    <section id="problem" style={{ background: 'var(--neutral-1300)', padding: '80px 0' }}>
+    <section id="problem" className="section-pad" style={{ background: 'var(--neutral-1300)' }}>
       <div className="wrap">
         <SectionHead eyebrow="The current reality" title="Most brokers lose deals they already won" sub="A broker gets 25+ inquiries a day. It's rarely the market that loses the deal — it's the follow-up. Here's where deals leak today." />
-        <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 20 }}>
+        <motion.div className="grid-2col" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ gap: 20 }}>
           {probs.map(([Icon, t, d]) => (
             <motion.div
               key={t}
@@ -34,10 +34,11 @@ export default function Problem() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          style={{ marginTop: 24, display: 'flex', alignItems: 'center', gap: 20, background: 'linear-gradient(135deg,#0E2647,#081A33)', borderRadius: 20, padding: '28px 32px', color: '#fff' }}
+          className="stat-bar"
+          style={{ marginTop: 24, background: 'linear-gradient(135deg,#0E2647,#081A33)', borderRadius: 20, color: '#fff' }}
         >
           <span style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(255,255,255,.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}><TrendingDown size={26} /></span>
-          <p style={{ fontFamily: 'var(--font-display)', fontSize: 26, lineHeight: '34px', fontWeight: 600 }}>Up to <span style={{ color: 'var(--warning-500)' }}>40% of potential deals</span> are lost to poor follow-up.</p>
+          <p className="stat-bar-text">Up to <span style={{ color: 'var(--warning-500)' }}>40% of potential deals</span> are lost to poor follow-up.</p>
         </motion.div>
       </div>
     </section>

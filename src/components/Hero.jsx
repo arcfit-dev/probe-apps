@@ -55,24 +55,24 @@ export default function Hero() {
   return (
     <section style={{ position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg,var(--brand-subtle) 0%,#fff 78%)' }}>
       <motion.div
-        className="wrap"
+        className="wrap grid-hero"
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
-        style={{ display: 'grid', gridTemplateColumns: '1.05fr .95fr', gap: 56, alignItems: 'center', padding: '72px 24px 84px' }}
+        style={{ alignItems: 'center', padding: '72px 24px 84px' }}
       >
         <motion.div variants={fadeUp}>
           <Badge tone="primary-light" size="lg" dot>AI lead automation for real estate</Badge>
-          <h1 style={{ fontSize: 60, lineHeight: '68px', margin: '20px 0 0' }}>
+          <h1 className="hero-title">
             Never lose a<br />property deal <span style={{ color: 'var(--text-brand)' }}>again</span>
           </h1>
-          <p style={{ fontSize: 20, lineHeight: '32px', color: 'var(--text-body)', margin: '20px 0 14px', maxWidth: 520 }}>
+          <p className="hero-sub" style={{ color: 'var(--text-body)', margin: '20px 0 14px', maxWidth: 520 }}>
             Probe captures every lead from WhatsApp, calls, portals and referrals, replies in seconds and follows up on autopilot — so hot buyers never go cold.
           </p>
           <p style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 18, color: 'var(--text-primary)', marginBottom: 26 }}>
             Capture. Engage. Convert. <span style={{ color: 'var(--text-brand)' }}>Automatically.</span>
           </p>
-          <div style={{ display: 'flex', gap: 12, marginBottom: 30 }}>
+          <div style={{ display: 'flex', gap: 12, marginBottom: 30, flexWrap: 'wrap' }}>
             <Button variant="primary" size="xl" icon={<ArrowRight size={20} />} href={DEMO_URL}>Book your free demo</Button>
             <Button variant="grey" size="xl" iconLeft={<Play size={20} />} href={DASH_URL}>See it in action</Button>
           </div>

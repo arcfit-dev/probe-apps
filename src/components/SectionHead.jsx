@@ -17,8 +17,8 @@ export default function SectionHead({ eyebrow, title, sub, center }) {
       }}
     >
       <span style={{ fontSize: 11, letterSpacing: '.07em', textTransform: 'uppercase', fontWeight: 700, color: 'var(--text-brand)' }}>{eyebrow}</span>
-      <h2 style={{ fontSize: 40, lineHeight: '48px', margin: '14px 0 12px' }}>{title}</h2>
-      <p style={{ fontSize: 18, lineHeight: '30px', color: 'var(--text-body)' }}>{sub}</p>
+      <h2 className="section-title">{title}</h2>
+      <p className="section-sub">{sub}</p>
     </motion.div>
   );
 }

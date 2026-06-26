@@ -13,10 +13,10 @@ const steps = [
 
 export default function Solution() {
   return (
-    <section id="solution" style={{ padding: '80px 0' }}>
+    <section id="solution" className="section-pad">
       <div className="wrap">
         <SectionHead center eyebrow="Our solution" title="Your 24/7 AI sales assistant" sub="Automate every step from first message to closed deal. One platform, fully automated, built for real estate brokers." />
-        <motion.div variants={staggerFast} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ display: 'flex', alignItems: 'stretch', gap: 8, flexWrap: 'nowrap' }}>
+        <motion.div className="flow-steps" variants={staggerFast} initial="hidden" whileInView="visible" viewport={viewportOnce}>
           {steps.map(([Icon, t, d], i) => (
             <motion.div key={t} style={{ display: 'contents' }}>
               <motion.div
@@ -41,7 +41,7 @@ export default function Solution() {
                 <p style={{ fontSize: 13.5, lineHeight: '20px', color: 'var(--text-body)' }}>{d}</p>
               </motion.div>
               {i < steps.length - 1 && (
-                <motion.div variants={fadeUp} style={{ display: 'flex', alignItems: 'center', color: 'var(--neutral-700)' }}>
+                <motion.div className="flow-chevron" variants={fadeUp}>
                   <ChevronRight size={20} />
                 </motion.div>
               )}
@@ -56,7 +56,7 @@ export default function Solution() {
           style={{ marginTop: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, background: '#0E2647', borderRadius: 16, padding: '18px 28px', color: '#fff' }}
         >
           <CheckCircle size={20} style={{ color: 'var(--success-500)' }} />
-          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 18 }}>One platform. Fully automated. More engagement, more visits, more closures.</span>
+          <span className="solution-bar-text">One platform. Fully automated. More engagement, more visits, more closures.</span>
         </motion.div>
       </div>
     </section>

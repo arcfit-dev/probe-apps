@@ -31,8 +31,8 @@ export default function Footer() {
         initial="hidden"
         whileInView="visible"
         viewport={viewportOnce}
-        className="wrap"
-        style={{ padding: '56px 24px 32px', display: 'grid', gridTemplateColumns: '1.4fr repeat(4,1fr)', gap: 32 }}
+        className="wrap grid-footer"
+        style={{ padding: '56px 24px 32px' }}
       >
         <motion.div variants={fadeUp}>
           <ProbeLogo white width={118} />
@@ -49,7 +49,7 @@ export default function Footer() {
           </motion.div>
         ))}
       </motion.div>
-      <div className="wrap" style={{ borderTop: '1px solid var(--neutral-200)', padding: '20px 24px', display: 'flex', justifyContent: 'space-between', fontSize: 13, color: 'var(--neutral-600)' }}>
+      <div className="wrap footer-bottom" style={{ borderTop: '1px solid var(--neutral-200)' }}>
         <span>&copy; 2026 Probe, Inc.</span>
         <span style={{ display: 'flex', gap: 16 }}>
           {socials.map(s => (

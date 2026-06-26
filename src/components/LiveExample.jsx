@@ -22,10 +22,10 @@ function Bubble({ me, children }) {
 
 export default function LiveExample() {
   return (
-    <section style={{ background: 'var(--neutral-1300)', padding: '80px 0' }}>
+    <section className="section-pad" style={{ background: 'var(--neutral-1300)' }}>
       <div className="wrap">
         <SectionHead eyebrow="Live example · real scenario" title="See how Probe handles a real lead" sub="Zero manual effort until the lead is ready to talk to a human." />
-        <div style={{ display: 'grid', gridTemplateColumns: '1.3fr .9fr', gap: 24, alignItems: 'start' }}>
+        <div className="grid-live">
           <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ background: '#fff', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-md)', overflow: 'hidden' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '14px 18px', background: 'linear-gradient(135deg,#0E2647,#081A33)', color: '#fff' }}>
               <span style={{ width: 36, height: 36, borderRadius: '50%', background: 'var(--brand)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 700 }}>PA</span>
@@ -35,7 +35,7 @@ export default function LiveExample() {
             <div style={{ padding: 18, display: 'flex', flexDirection: 'column', gap: 10, background: 'var(--neutral-1200)' }}>
               <Bubble me>Looking for a 2BHK in Gurgaon <span style={{ color: 'var(--text-muted)', fontSize: 11 }}>· 10:01 AM</span></Bubble>
               <Bubble>Hi! Sure, I can help with that. Here are some great 2BHK options in Gurgaon 👇</Bubble>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
+              <div className="grid-listings">
                 {listings.map(([loc, spec, price]) => (
                   <div key={loc} style={{ background: '#fff', border: '1px solid var(--border-subtle)', borderRadius: 10, overflow: 'hidden' }}>
                     <div style={{ height: 48, background: 'linear-gradient(135deg,var(--primary-700),var(--primary-500))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}><Home size={18} /></div>

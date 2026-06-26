@@ -8,7 +8,7 @@ const tiles = [[DollarSign, 'High-value transactions'], [Target, 'High buyer int
 export default function Opportunity() {
   return (
     <section style={{ padding: '80px 24px' }}>
-      <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center' }}>
+      <div className="wrap grid-2col" style={{ gap: 48, alignItems: 'center' }}>
         <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={viewportOnce}>
           <SectionHead eyebrow="The opportunity" title="One extra deal changes your whole month" sub="Real estate is one of the highest-value industries there is — every recovered lead is worth a fortune." />
           <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>

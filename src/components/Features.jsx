@@ -30,12 +30,12 @@ function AnimatedCounter({ value, suffix = '' }) {
 
 export default function Features() {
   return (
-    <section id="features" style={{ padding: '80px 0' }}>
+    <section id="features" className="section-pad">
       <div className="wrap">
         <SectionHead center eyebrow="Key features" title="Everything you need to capture, engage & close" sub="All the tools brokers need on one platform that works 24/7 for you." />
 
         <motion.div variants={scaleUp} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ background: '#fff', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-lg)', overflow: 'hidden', marginBottom: 40 }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr' }}>
+          <div className="grid-sidebar">
             <div style={{ background: '#0E2647', padding: '20px 16px', color: '#fff' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 22 }}><ProbeLogo white width={96} /></div>
               {sidebarItems.map(([Icon, l, on], i) => (
@@ -46,7 +46,7 @@ export default function Features() {
             </div>
             <div style={{ padding: 24 }}>
               <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 20, marginBottom: 16 }}>Dashboard</div>
-              <motion.div variants={staggerFast} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 14, marginBottom: 20 }}>
+              <motion.div className="grid-metrics" variants={staggerFast} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ marginBottom: 20 }}>
                 {metrics.map(([l, v, d, Icon]) => (
                   <motion.div key={l} variants={fadeUp} style={{ border: '1px solid var(--border-subtle)', borderRadius: 12, padding: '14px 16px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: 'var(--text-muted)' }}><span style={{ fontSize: 12.5 }}>{l}</span><Icon size={15} /></div>
@@ -55,7 +55,7 @@ export default function Features() {
                   </motion.div>
                 ))}
               </motion.div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: 14 }}>
+              <div className="grid-chart">
                 <div style={{ border: '1px solid var(--border-subtle)', borderRadius: 12, padding: 16 }}>
                   <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 12 }}>Leads overview · this month</div>
                   <svg viewBox="0 0 300 90" style={{ width: '100%', height: 90 }}>
@@ -78,7 +78,7 @@ export default function Features() {
           </div>
         </motion.div>
 
-        <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}>
+        <motion.div className="grid-3col" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce}>
           {feats.map(([Icon, t, d]) => (
             <motion.div
               key={t}

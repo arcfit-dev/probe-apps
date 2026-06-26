@@ -23,7 +23,8 @@ export default function FinalCTA() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          style={{ position: 'relative', overflow: 'hidden', borderRadius: 24, padding: '56px 48px', background: 'linear-gradient(135deg,#0E2647,#081A33)', boxShadow: 'var(--shadow-brand)', color: '#fff' }}
+          className="cta-inner"
+          style={{ position: 'relative', overflow: 'hidden', borderRadius: 24, background: 'linear-gradient(135deg,#0E2647,#081A33)', boxShadow: 'var(--shadow-brand)', color: '#fff' }}
         >
           <svg viewBox="0 0 100 100" style={{ position: 'absolute', right: 40, top: -30, width: 260, height: 260, opacity: .1 }}><path d="M55 10 L30 55 H47 L42 90 L72 40 H53 Z" fill="#fff" /></svg>
           <div style={{ position: 'relative', maxWidth: 760 }}>
@@ -32,15 +33,16 @@ export default function FinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              style={{ fontSize: 44, lineHeight: '52px', marginBottom: 14 }}
+              className="cta-title"
+              style={{ marginBottom: 14 }}
             >Stop losing deals. Start closing more — automatically.</motion.h2>
             <p style={{ fontSize: 18, color: 'var(--primary-800)', marginBottom: 28 }}>The future of real estate is automatic. Be part of it — get notified the moment we launch.</p>
-            <div style={{ display: 'flex', gap: 12, maxWidth: 520, marginBottom: 14 }}>
+            <div className="email-row" style={{ marginBottom: 14 }}>
               <input
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 placeholder="Enter your email address"
-                style={{ flex: 1, padding: '15px 18px', borderRadius: 8, border: 'none', outline: 'none', fontFamily: 'var(--font-sans)', fontSize: 16 }}
+                style={{ flex: 1, padding: '15px 18px', borderRadius: 8, border: 'none', outline: 'none', fontFamily: 'var(--font-sans)', fontSize: 16, minWidth: 0 }}
               />
               <Button
                 variant="light" size="xl"
@@ -56,7 +58,7 @@ export default function FinalCTA() {
             >
               {done ? "🎉 You're on the list — we'll be in touch." : 'Join the waitlist for early access and exclusive updates.'}
             </motion.div>
-            <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 20, marginTop: 40, paddingTop: 32, borderTop: '1px solid rgba(255,255,255,.15)' }}>
+            <motion.div className="grid-4col" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ marginTop: 40, paddingTop: 32, borderTop: '1px solid rgba(255,255,255,.15)' }}>
               {pillars.map(([Icon, t, d]) => (
                 <motion.div key={t} variants={fadeUp}>
                   <span style={{ width: 40, height: 40, borderRadius: 10, background: 'rgba(255,255,255,.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 10 }}><Icon size={18} /></span>

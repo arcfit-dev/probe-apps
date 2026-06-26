@@ -28,10 +28,10 @@ export default function ROI() {
   const extraRev = extraDeals * comm;
 
   return (
-    <section style={{ padding: '80px 0' }}>
+    <section className="section-pad">
       <div className="wrap">
         <SectionHead center eyebrow="ROI — make it concrete" title="See the revenue Probe can unlock" sub="Move your conversion rate just a few points and the extra deals add up fast." />
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+        <div className="grid-2col">
           <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ padding: 32, background: '#fff', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}>
             <Field label="Monthly leads" val={leads} set={setLeads} min={20} max={500} step={10} suffix="" />
             <Field label="Current conversion" val={base} set={setBase} min={2} max={30} step={1} suffix="%" />
@@ -45,7 +45,8 @@ export default function ROI() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, type: 'spring', stiffness: 300 }}
-              style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 40, marginBottom: 20 }}
+              className="stat-lg"
+              style={{ fontFamily: 'var(--font-display)', fontWeight: 700, marginBottom: 20 }}
             >{extraDeals} deals</motion.div>
             <div style={{ borderTop: '1px solid rgba(255,255,255,.15)', paddingTop: 20 }}>
               <div style={{ fontSize: 15, color: 'var(--primary-800)', marginBottom: 6 }}>Extra revenue every month</div>
@@ -54,7 +55,8 @@ export default function ROI() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, type: 'spring', stiffness: 300 }}
-                style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 56, color: 'var(--success-600)', lineHeight: 1 }}
+                className="stat-xl"
+                style={{ fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--success-600)', lineHeight: 1 }}
               >₹{extraRev}L</motion.div>
             </div>
             <p style={{ fontSize: 13, color: 'var(--primary-700)', marginTop: 20 }}>Based on improved conversion and automation-driven follow-ups. Results vary by market, team and execution.</p>

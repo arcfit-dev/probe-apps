@@ -118,8 +118,8 @@ export default function WhatsAppDemo() {
   }, [messages, typing]);
 
   return (
-    <section style={{ background: 'linear-gradient(180deg,#fff 0%,var(--brand-subtle) 100%)', padding: '80px 0' }}>
-      <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'center' }}>
+    <section className="section-pad" style={{ background: 'linear-gradient(180deg,#fff 0%,var(--brand-subtle) 100%)' }}>
+      <div className="wrap grid-2col" style={{ gap: 56, alignItems: 'center' }}>
         <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={viewportOnce}>
           <SectionHead eyebrow="AI chat in action" title="Watch Probe close a lead on WhatsApp" sub="From first hello to a booked site visit — your AI assistant handles the entire conversation, instantly." />
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -139,7 +139,7 @@ export default function WhatsAppDemo() {
           <motion.div
             whileHover={{ y: -8 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
-            style={{ width: 330, height: 660, background: '#0E2647', borderRadius: 44, padding: 12, boxShadow: 'var(--shadow-lg)', position: 'relative' }}
+            style={{ width: '100%', maxWidth: 330, aspectRatio: '1/2', background: '#0E2647', borderRadius: 44, padding: 12, boxShadow: 'var(--shadow-lg)', position: 'relative' }}
           >
             <div style={{ position: 'absolute', top: 20, left: '50%', transform: 'translateX(-50%)', width: 120, height: 26, background: '#0E2647', borderRadius: 14, zIndex: 3 }} />
             <div style={{ width: '100%', height: '100%', borderRadius: 34, overflow: 'hidden', display: 'flex', flexDirection: 'column', background: '#ECE5DD' }}>

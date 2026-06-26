@@ -28,7 +28,7 @@ function AnimatedStat({ value, label, delay }) {
       animate={isInView ? { opacity: 1, scale: 1 } : {}}
       transition={{ delay, duration: 0.5, type: 'spring', stiffness: 200 }}
     >
-      <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 44, color: 'var(--primary-700)' }}>{value}</div>
+      <div className="benefit-stat">{value}</div>
       <div style={{ fontSize: 14.5, color: 'var(--neutral-700)', marginTop: 4 }}>{label}</div>
     </motion.div>
   );
@@ -36,10 +36,10 @@ function AnimatedStat({ value, label, delay }) {
 
 export default function Benefits() {
   return (
-    <section style={{ background: 'var(--neutral-1300)', padding: '80px 0' }}>
+    <section className="section-pad" style={{ background: 'var(--neutral-1300)' }}>
       <div className="wrap">
         <SectionHead center eyebrow="The impact that matters" title="Before Probe vs. after Probe" sub="Automate follow-ups. Never miss a deal. Close more." />
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+        <div className="grid-2col">
           <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ padding: 28, background: 'var(--error-800)', border: '1px solid var(--error-700)', borderRadius: 16, boxShadow: 'var(--shadow-sm)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 18, color: 'var(--error-200)', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 18 }}><XCircle size={20} /> Without automation</div>
             {before.map(([t, d]) => (
@@ -59,7 +59,7 @@ export default function Benefits() {
             ))}
           </motion.div>
         </div>
-        <div style={{ marginTop: 24, display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24, background: '#0E2647', borderRadius: 20, padding: 32, textAlign: 'center' }}>
+        <div className="grid-3col" style={{ marginTop: 24, background: '#0E2647', borderRadius: 20, padding: 32, textAlign: 'center' }}>
           {results.map(([n, l], i) => <AnimatedStat key={l} value={n} label={l} delay={i * 0.2} />)}
         </div>
       </div>

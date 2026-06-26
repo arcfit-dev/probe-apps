@@ -16,13 +16,13 @@ const perks = [[Calendar, '14-day free trial'], [Unlock, 'No long-term contracts
 
 export default function Pricing() {
   return (
-    <section id="pricing" style={{ padding: '80px 0' }}>
+    <section id="pricing" className="section-pad">
       <div className="wrap">
         <SectionHead center eyebrow="Pricing" title="Flexible plans for every stage" sub="Start small, scale big. No setup fees, cancel anytime, 14-day money-back guarantee." />
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 32 }}>
           <Badge tone="warning-light" size="lg" icon={<Clock size={14} />}>Launching soon — pricing to be announced</Badge>
         </div>
-        <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24, alignItems: 'stretch' }}>
+        <motion.div className="grid-3col" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ alignItems: 'stretch' }}>
           {plans.map(p => (
             <motion.div
               key={p.name}
@@ -52,7 +52,7 @@ export default function Pricing() {
             </motion.div>
           ))}
         </motion.div>
-        <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ marginTop: 28, display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 20 }}>
+        <motion.div className="grid-4col" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ marginTop: 28 }}>
           {perks.map(([Icon, t]) => (
             <motion.div key={t} variants={fadeUp} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
               <span style={{ width: 36, height: 36, borderRadius: 10, background: 'var(--brand-subtle)', color: 'var(--text-brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}><Icon size={16} /></span>
