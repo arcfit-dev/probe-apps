@@ -1,0 +1,53 @@
+# Probe App — AI Lead Automation for Real Estate Brokers
+
+> Probe captures leads from WhatsApp, calls, property portals and referrals, replies in seconds with AI, and follows up automatically — so real estate brokers never lose a deal to poor follow-up again.
+
+## Pages
+
+- https://probeapps.com/ — Homepage: AI lead automation platform for real estate brokers. Capture, engage and convert leads automatically.
+
+## What Probe Does
+
+Probe App is a SaaS platform that automates the entire lead lifecycle for real estate brokers:
+
+1. Lead Capture — Automatically captures leads from WhatsApp, missed calls, property portals (99acres, MagicBricks), website forms, email and referrals into a single unified inbox.
+2. Instant AI Replies — AI responds to every inquiry in seconds, qualifies buyers and shares matching property listings.
+3. Smart Follow-ups — AI follows up at the right time with personalised messages via WhatsApp until the lead is ready for a site visit.
+4. Deal Tracking — Track site visits, negotiations, payments and closures in one dashboard.
+5. Pipeline Analytics — Monitor response times, lead sources, conversion rates and revenue.
+
+## Key Facts
+
+- Built specifically for real estate brokers and brokerages
+- Supports WhatsApp, phone, email, portals, website and referral channels
+- AI-powered instant responses and automated follow-ups
+- Up to 30% increase in conversion rates
+- 50% time saved on manual follow-ups
+- Currently in pre-launch with waitlist open
+- 14-day free trial, no long-term contracts
+
+## FAQ
+
+Q: What is Probe App?
+A: Probe App is an AI-powered lead automation platform built specifically for real estate brokers. It captures leads from all channels, responds instantly with AI, and follows up automatically until the deal closes.
+
+Q: How does Probe capture leads?
+A: Probe connects to WhatsApp, missed calls, property portals, website inquiries, email and referrals — funnelling every lead into a single unified inbox automatically.
+
+Q: What channels does Probe support?
+A: WhatsApp, phone calls, property portals, website forms, email inquiries and manual referrals. Every channel is captured and tracked in one dashboard.
+
+Q: How does AI follow-up work?
+A: Probe's AI analyses each lead's intent and stage, then sends personalised follow-up messages at the right time via WhatsApp. It qualifies buyers, shares matching listings, and keeps leads engaged until they are ready for a site visit.
+
+Q: Is Probe built specifically for real estate?
+A: Yes. Unlike generic CRMs, Probe is designed from the ground up for real estate workflows — property matching, site visit scheduling, deal tracking and commission-based analytics.
+
+Q: How much does Probe cost?
+A: Probe is currently in pre-launch. Pricing will be announced soon. Join the waitlist for early access and exclusive launch pricing. 14-day free trial, no long-term contracts.
+
+## Contact
+
+- Website: https://probeapps.com
+- Dashboard: https://dash.probeapps.com
+- Email: hello@probeapps.com

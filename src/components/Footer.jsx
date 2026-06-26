@@ -41,7 +41,7 @@ export default function Footer() {
           </p>
         </motion.div>
         {columns.map(([h, items]) => (
-          <motion.div key={h} variants={fadeUp}>
+          <motion.div key={h} variants={fadeUp} role="navigation" aria-label={h}>
             <div style={{ fontWeight: 600, fontSize: 14, marginBottom: 14 }}>{h}</div>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {items.map(i => <li key={i}><a href="#" style={{ fontSize: 14, color: 'var(--neutral-600)', transition: 'color .15s' }} onMouseEnter={e => e.target.style.color = '#fff'} onMouseLeave={e => e.target.style.color = 'var(--neutral-600)'}>{i}</a></li>)}

@@ -34,7 +34,7 @@ export default function Nav() {
       <div className="wrap" style={{ height: 72, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 40 }}>
           <ProbeLogo width={118} />
-          <nav className="nav-desktop" style={{ gap: 28 }}>
+          <nav className="nav-desktop" aria-label="Main navigation" style={{ gap: 28 }}>
             {links.map(([l, h]) => (
               <motion.a
                 key={h}

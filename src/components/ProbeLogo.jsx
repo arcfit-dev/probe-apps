@@ -10,7 +10,7 @@ export function ProbeLogo({ white = false, width = 150 }) {
     <div style={{ display: 'flex', alignItems: 'center', gap, flexShrink: 0 }}>
       <img
         src={logo}
-        alt=""
+        alt="Probe App logo"
         width={iconSize}
         height={iconSize}
         style={{ borderRadius: 8 * scale, flexShrink: 0 }}

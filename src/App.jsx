@@ -10,27 +10,33 @@ import Features from './components/Features';
 import Benefits from './components/Benefits';
 import ROI from './components/ROI';
 import WhyDifferent from './components/WhyDifferent';
+import FAQ from './components/FAQ';
 import Pricing from './components/Pricing';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
+import JsonLd from './components/JsonLd';
 
 export default function App() {
   return (
     <>
+      <JsonLd />
       <Nav />
-      <Hero />
-      <Trust />
-      <Problem />
-      <Opportunity />
-      <Solution />
-      <WhatsAppDemo />
-      <LiveExample />
-      <Features />
-      <Benefits />
-      <ROI />
-      <WhyDifferent />
-      <Pricing />
-      <FinalCTA />
+      <main>
+        <Hero />
+        <Trust />
+        <Problem />
+        <Opportunity />
+        <Solution />
+        <WhatsAppDemo />
+        <LiveExample />
+        <Features />
+        <Benefits />
+        <ROI />
+        <WhyDifferent />
+        <FAQ />
+        <Pricing />
+        <FinalCTA />
+      </main>
       <Footer />
     </>
   );
