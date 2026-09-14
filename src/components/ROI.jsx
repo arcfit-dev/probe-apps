@@ -32,7 +32,7 @@ export default function ROI() {
       <div className="wrap">
         <SectionHead center eyebrow="ROI — make it concrete" title="See the revenue Probe can unlock" sub="Move your conversion rate just a few points and the extra deals add up fast." />
         <div className="grid-2col">
-          <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ padding: 32, background: '#fff', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}>
+          <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ padding: 32, background: 'var(--surface)', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}>
             <Field label="Monthly leads" val={leads} set={setLeads} min={20} max={500} step={10} suffix="" />
             <Field label="Current conversion" val={base} set={setBase} min={2} max={30} step={1} suffix="%" />
             <Field label="Conversion with Probe" val={lift} set={v => setLift(Math.max(v, base))} min={2} max={40} step={1} suffix="%" />

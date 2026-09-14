@@ -10,7 +10,7 @@ function FAQItem({ q, a, open, onToggle }) {
     <motion.div
       variants={fadeUp}
       style={{
-        background: '#fff',
+        background: 'var(--surface)',
         borderRadius: 14,
         border: '1px solid var(--border-subtle)',
         boxShadow: 'var(--shadow-sm)',

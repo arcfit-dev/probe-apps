@@ -23,7 +23,7 @@ export default function Solution() {
                 variants={fadeUp}
                 whileHover={{ y: -6, boxShadow: 'var(--shadow-md)' }}
                 transition={{ duration: 0.25 }}
-                style={{ flex: 1, textAlign: 'center', padding: 22, background: '#fff', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}
+                style={{ flex: 1, textAlign: 'center', padding: 22, background: 'var(--surface)', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}
               >
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 14 }}>
                   <span style={{ position: 'relative', width: 54, height: 54, borderRadius: 14, background: 'var(--brand-subtle)', color: 'var(--text-brand)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

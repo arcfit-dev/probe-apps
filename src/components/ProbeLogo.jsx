@@ -20,7 +20,7 @@ export function ProbeLogo({ white = false, width = 150 }) {
           fontFamily: 'Manrope, sans-serif',
           fontSize,
           fontWeight: 700,
-          color: white ? '#fff' : '#0E2647',
+          color: white ? '#fff' : 'var(--text-primary)',
           whiteSpace: 'nowrap',
         }}
       >

@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { BorderBeam } from 'border-beam';
+import { ThinkingOrb } from 'thinking-orbs';
 import { PhoneCall, Mic, Clock, TrendingUp, Sparkles, PhoneOff, Volume2 } from 'lucide-react';
 import SectionHead from './SectionHead';
 import Button from './Button';
@@ -153,6 +155,7 @@ export default function CallingAgent() {
   }, [visibleCount]);
 
   const speaking = status === 'connected' && !showOutcome;
+  const orbState = status === 'ringing' ? 'connecting' : showOutcome ? 'breathing' : 'listening';
 
   return (
     <section id="calling-agent" className="section-pad" style={{ background: 'linear-gradient(180deg,#081A33 0%,#0E2647 55%,#081A33 100%)', color: '#fff', position: 'relative', overflow: 'hidden' }}>
@@ -193,7 +196,11 @@ export default function CallingAgent() {
           <motion.div
             whileHover={{ y: -8 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
-            style={{ width: '100%', maxWidth: 330, aspectRatio: '1/2', background: '#0B2036', borderRadius: 44, padding: 12, boxShadow: '0 24px 60px rgba(0,0,0,.4)', position: 'relative', zIndex: 1, border: '1px solid rgba(255,255,255,.08)' }}
+            style={{ width: '100%', maxWidth: 330, position: 'relative', zIndex: 1 }}
+          >
+          <BorderBeam size="md" colorVariant="ocean" theme="dark" strength={0.55} borderRadius={44}>
+          <div
+            style={{ width: '100%', aspectRatio: '1/2', background: '#0B2036', borderRadius: 44, padding: 12, boxShadow: '0 24px 60px rgba(0,0,0,.4)', border: '1px solid rgba(255,255,255,.08)' }}
           >
             <div style={{ position: 'absolute', top: 20, left: '50%', transform: 'translateX(-50%)', width: 120, height: 26, background: '#0B2036', borderRadius: 14, zIndex: 3 }} />
 
@@ -214,6 +221,9 @@ export default function CallingAgent() {
             <div style={{ width: '100%', height: '100%', borderRadius: 34, overflow: 'hidden', display: 'flex', flexDirection: 'column', background: 'linear-gradient(180deg,#132C4A 0%,#0B2036 100%)' }}>
               <div style={{ padding: '38px 16px 14px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
                 <div style={{ position: 'relative', width: 64, height: 64 }}>
+                  <div style={{ position: 'absolute', inset: -10, opacity: 0.85 }}>
+                    <ThinkingOrb state={orbState} size={64} theme="dark" />
+                  </div>
                   {status === 'ringing' && <RingPulse />}
                   <div style={{ width: 64, height: 64, borderRadius: '50%', background: 'linear-gradient(135deg,#1E73D8,#4BA3F0)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: 20, fontWeight: 700, position: 'relative' }}>
                     {scenario.name.split(' ').map((w) => w[0]).join('')}
@@ -269,6 +279,8 @@ export default function CallingAgent() {
                 <span style={{ width: 40, height: 40, borderRadius: '50%', background: 'rgba(255,255,255,.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}><Volume2 size={16} /></span>
               </div>
             </div>
+          </div>
+          </BorderBeam>
           </motion.div>
         </motion.div>
       </div>

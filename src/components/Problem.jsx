@@ -22,7 +22,7 @@ export default function Problem() {
               variants={fadeUp}
               whileHover={{ y: -4, boxShadow: 'var(--shadow-md)' }}
               transition={{ duration: 0.25 }}
-              style={{ display: 'flex', gap: 16, padding: 24, background: '#fff', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}
+              style={{ display: 'flex', gap: 16, padding: 24, background: 'var(--surface)', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}
             >
               <span style={{ flexShrink: 0, width: 44, height: 44, borderRadius: 12, background: 'var(--error-800)', color: 'var(--error-300)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Icon size={20} /></span>
               <div><h3 style={{ fontSize: 19, marginBottom: 6 }}>{t}</h3><p style={{ fontSize: 15, lineHeight: '24px', color: 'var(--text-body)' }}>{d}</p></div>

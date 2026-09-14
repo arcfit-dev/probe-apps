@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
+import { BorderBeam } from 'border-beam';
 import { ArrowRight, Play, MessageCircle, RefreshCw, BarChart2, Briefcase, Inbox, Zap, PhoneMissed, Globe, Mail } from 'lucide-react';
 import Button from './Button';
 import { DASH_URL, DEMO_URL } from '../constants/links';
 import Badge from './Badge';
 import { fadeUp, slideLeft, staggerContainer, staggerSlow, viewportOnce } from '../hooks/useAnimations';
+import useTheme from '../hooks/useTheme';
 
 const pillars = [
   [MessageCircle, 'WhatsApp AI Agent'],
@@ -20,10 +22,12 @@ const feed = [
 ];
 
 function HeroPanel() {
+  const theme = useTheme();
   return (
-    <motion.div
-      variants={slideLeft}
-      style={{ background: '#fff', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-lg)', overflow: 'hidden' }}
+    <motion.div variants={slideLeft}>
+    <BorderBeam size="md" colorVariant="ocean" theme={theme} strength={0.6} borderRadius={16}>
+    <div
+      style={{ background: 'var(--surface)', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-lg)', overflow: 'hidden' }}
     >
       <div style={{ background: 'linear-gradient(135deg,#0E2647,#081A33)', padding: '18px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, color: '#fff' }}>
@@ -47,13 +51,15 @@ function HeroPanel() {
           <Zap size={18} /><span style={{ fontSize: 13, fontWeight: 600 }}>4 leads captured & answered in the last 2 minutes</span>
         </motion.div>
       </motion.div>
+    </div>
+    </BorderBeam>
     </motion.div>
   );
 }
 
 export default function Hero() {
   return (
-    <section style={{ position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg,var(--brand-subtle) 0%,#fff 78%)' }}>
+    <section style={{ position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg,var(--brand-subtle) 0%,var(--bg-page) 78%)' }}>
       <motion.div
         className="wrap grid-hero"
         variants={staggerContainer}
@@ -79,7 +85,7 @@ export default function Hero() {
           <motion.div variants={staggerContainer} initial="hidden" animate="visible" style={{ display: 'flex', gap: 18, flexWrap: 'wrap' }}>
             {pillars.map(([Icon, t]) => (
               <motion.div key={t} variants={fadeUp} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <span style={{ width: 32, height: 32, borderRadius: 8, background: '#fff', boxShadow: 'var(--shadow-sm)', color: 'var(--text-brand)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Icon size={16} /></span>
+                <span style={{ width: 32, height: 32, borderRadius: 8, background: 'var(--surface)', boxShadow: 'var(--shadow-sm)', color: 'var(--text-brand)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Icon size={16} /></span>
                 <span style={{ fontSize: 13, fontWeight: 600 }}>{t}</span>
               </motion.div>
             ))}

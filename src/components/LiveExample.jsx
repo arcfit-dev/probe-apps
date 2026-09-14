@@ -12,7 +12,7 @@ function Bubble({ me, children }) {
     <div style={{ display: 'flex', justifyContent: me ? 'flex-end' : 'flex-start' }}>
       <div style={{
         maxWidth: '82%', padding: '10px 14px', borderRadius: 14, fontSize: 14, lineHeight: '20px',
-        background: me ? 'var(--brand-subtle)' : '#fff', color: 'var(--text-primary)',
+        background: me ? 'var(--brand-subtle)' : 'var(--surface)', color: 'var(--text-primary)',
         border: `1px solid ${me ? 'transparent' : 'var(--border-subtle)'}`,
         borderBottomRightRadius: me ? 4 : 14, borderBottomLeftRadius: me ? 14 : 4,
       }}>{children}</div>
@@ -26,7 +26,7 @@ export default function LiveExample() {
       <div className="wrap">
         <SectionHead eyebrow="Live example · real scenario" title="See how Probe handles a real lead" sub="Zero manual effort until the lead is ready to talk to a human." />
         <div className="grid-live">
-          <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ background: '#fff', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-md)', overflow: 'hidden' }}>
+          <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ background: 'var(--surface)', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-md)', overflow: 'hidden' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '14px 18px', background: 'linear-gradient(135deg,#0E2647,#081A33)', color: '#fff' }}>
               <span style={{ width: 36, height: 36, borderRadius: '50%', background: 'var(--brand)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 700 }}>PA</span>
               <div><div style={{ fontSize: 14, fontWeight: 600 }}>Probe AI Assistant</div><div style={{ fontSize: 12, opacity: .7 }}>Skyline Realty · online</div></div>
@@ -37,7 +37,7 @@ export default function LiveExample() {
               <Bubble>Hi! Sure, I can help with that. Here are some great 2BHK options in Gurgaon 👇</Bubble>
               <div className="grid-listings">
                 {listings.map(([loc, spec, price]) => (
-                  <div key={loc} style={{ background: '#fff', border: '1px solid var(--border-subtle)', borderRadius: 10, overflow: 'hidden' }}>
+                  <div key={loc} style={{ background: 'var(--surface)', border: '1px solid var(--border-subtle)', borderRadius: 10, overflow: 'hidden' }}>
                     <div style={{ height: 48, background: 'linear-gradient(135deg,var(--primary-700),var(--primary-500))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}><Home size={18} /></div>
                     <div style={{ padding: '8px 10px' }}>
                       <div style={{ fontSize: 12, fontWeight: 600 }}>{loc}</div>
@@ -53,7 +53,7 @@ export default function LiveExample() {
             </div>
           </motion.div>
 
-          <motion.div variants={slideLeft} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ background: '#fff', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-md)', padding: 24 }}>
+          <motion.div variants={slideLeft} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ background: 'var(--surface)', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-md)', padding: 24 }}>
             <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 17, marginBottom: 18 }}>What happened behind the scenes</div>
             <motion.div variants={staggerSlow} initial="hidden" whileInView="visible" viewport={viewportOnce}>
               {timeline.map((t, i) => (

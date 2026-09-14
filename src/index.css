@@ -68,18 +68,51 @@
 
   --font-display: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --bg-page: #ffffff;
+  --surface: #ffffff;
+  --nav-bg: rgba(255,255,255,.85);
+}
+
+/* ─── Dark theme ─── */
+:root[data-theme="dark"] {
+  --bg-page: #0A1526;
+  --surface: #101F36;
+  --nav-bg: rgba(10,21,38,.85);
+
+  --neutral-1300: #0D1B30;
+  --neutral-1200: #12233C;
+  --neutral-1100: #172A47;
+  --neutral-800: #6B7484;
+  --neutral-700: #8C95A4;
+  --neutral-600: #A7AFBC;
+  --neutral-200: #2A3548;
+
+  --brand-subtle: rgba(75,163,240,.14);
+
+  --text-primary: #F1F5F9;
+  --text-body: #AEB8C4;
+  --text-muted: #8790A0;
+
+  --border-subtle: rgba(255,255,255,.10);
+  --border-default: rgba(255,255,255,.18);
+
+  --shadow-sm: 0px 2px 4px 0px rgba(0,0,0,0.45);
+  --shadow-md: 0px 4px 14px 0px rgba(0,0,0,0.4);
+  --shadow-lg: 0px 14px 36px 0px rgba(0,0,0,0.5);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background: #fff;
+  background: var(--bg-page);
   font-family: var(--font-sans);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background .25s ease, color .25s ease;
 }
 a { text-decoration: none; color: inherit; }
 h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; margin: 0; }
