@@ -4,7 +4,7 @@ import SectionHead from './SectionHead';
 import { fadeUp, scaleUp, staggerContainer, viewportOnce } from '../hooks/useAnimations';
 import useBreakpoint from '../hooks/useBreakpoint';
 
-const rows = ['Built for real estate workflows', 'Automation-first (not just tracking)', 'Instant responses & follow-ups', 'Easy to use, quick setup', 'Built for conversions'];
+const rows = ['Real AI Agents (not just scripted bots)', 'Built for real estate workflows', 'Instant responses & follow-ups', 'Easy to use, quick setup', 'Built for conversions'];
 const cols = ['Excel', 'Manual WhatsApp', 'Generic CRMs', 'Probe'];
 const cells = [['x', 'x', '~', 'y'], ['x', 'x', '~', 'y'], ['x', 'x', '~', 'y'], ['x', 'x', '~', 'y'], ['x', 'x', '~', 'y']];
 

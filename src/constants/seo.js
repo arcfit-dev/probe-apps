@@ -1,17 +1,19 @@
 export const SEO = {
   siteName: 'Probe App',
   siteUrl: 'https://probeapps.com',
-  title: 'Probe App — AI Lead Automation for Real Estate Brokers',
+  title: 'Probe App — AI WhatsApp & Calling Agents for Real Estate Brokers',
   description:
-    'Probe captures every lead from WhatsApp, calls, portals and referrals, replies in seconds and follows up automatically. Close more property deals with AI.',
+    'Probe turns your business number into an AI-powered lead machine. WhatsApp AI Agent and AI Calling Agent capture every lead, reply instantly and follow up automatically — all on one dashboard.',
   keywords: [
-    'real estate CRM',
+    'AI agent real estate',
+    'WhatsApp AI agent',
+    'AI calling agent',
     'AI lead automation',
     'real estate broker software',
     'WhatsApp lead capture',
+    'voice AI real estate',
     'property deal automation',
     'real estate follow-up AI',
-    'lead management real estate',
     'automated lead nurturing',
   ],
   ogImage: 'https://probeapps.com/og-image.png',
@@ -30,7 +32,15 @@ export const SEO = {
 export const FAQ_DATA = [
   {
     q: 'What is Probe App?',
-    a: 'Probe App is an AI-powered lead automation platform built specifically for real estate brokers. It captures leads from WhatsApp, calls, property portals and referrals, responds instantly with AI, and follows up automatically until the deal closes.',
+    a: "Probe turns your business number into an AI-powered lead machine. It's not a CRM — it's two AI Agents (a WhatsApp AI Agent and an AI Calling Agent) that capture leads, reply and follow up automatically, both feeding one personalised dashboard.",
+  },
+  {
+    q: 'What is the WhatsApp AI Agent?',
+    a: 'Your WhatsApp AI Agent runs directly on your own business WhatsApp number. It replies to inquiries in seconds, qualifies the buyer, shares matching listings, and follows up until the buyer is ready for a site visit.',
+  },
+  {
+    q: 'What is the AI Calling Agent?',
+    a: "Probe's AI Calling Agent is a best-in-class add-on that makes and takes calls on your behalf — following up on missed calls, calling warm leads, and confirming site visits by voice, all logged straight into your dashboard.",
   },
   {
     q: 'How does Probe capture leads?',
@@ -39,10 +49,6 @@ export const FAQ_DATA = [
   {
     q: 'What channels does Probe support?',
     a: 'Probe supports WhatsApp, phone calls, property portals, website forms, email inquiries and manual referrals. Every channel is captured and tracked in one dashboard so no lead slips through the cracks.',
-  },
-  {
-    q: 'How does AI follow-up work?',
-    a: "Probe's AI analyses each lead's intent and stage, then sends personalised follow-up messages at the right time via WhatsApp. It qualifies buyers, shares matching property listings, and keeps leads engaged until they are ready for a site visit.",
   },
   {
     q: 'Is Probe built specifically for real estate?',

@@ -6,17 +6,17 @@ import Badge from './Badge';
 import { fadeUp, slideLeft, staggerContainer, staggerSlow, viewportOnce } from '../hooks/useAnimations';
 
 const pillars = [
-  [MessageCircle, 'AI replies instantly'],
-  [RefreshCw, 'Smart follow-ups'],
-  [BarChart2, 'Track & convert'],
+  [MessageCircle, 'WhatsApp AI Agent'],
+  [PhoneMissed, 'AI Calling Agent'],
+  [BarChart2, 'One live dashboard'],
   [Briefcase, 'Close more deals'],
 ];
 
 const feed = [
-  [MessageCircle, 'WhatsApp', '2BHK in Gurgaon?', 'success-light'],
-  [PhoneMissed, 'Missed call', '+91 98765 43210', 'error-light'],
-  [Globe, 'Property portal', 'New lead', 'primary-light'],
-  [Mail, 'Email inquiry', 'info@example.com', 'warning-light'],
+  [MessageCircle, 'WhatsApp', '2BHK in Gurgaon?', 'success-light', 'WhatsApp Agent replied'],
+  [PhoneMissed, 'Missed call', '+91 98765 43210', 'error-light', 'Voice Agent called back'],
+  [Globe, 'Property portal', 'New lead', 'primary-light', 'AI replied'],
+  [Mail, 'Email inquiry', 'info@example.com', 'warning-light', 'AI replied'],
 ];
 
 function HeroPanel() {
@@ -28,19 +28,19 @@ function HeroPanel() {
       <div style={{ background: 'linear-gradient(135deg,#0E2647,#081A33)', padding: '18px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, color: '#fff' }}>
           <span style={{ width: 30, height: 30, borderRadius: 8, background: 'rgba(255,255,255,.16)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Inbox size={16} /></span>
-          <b style={{ fontFamily: 'var(--font-display)', fontSize: 16 }}>Unified lead inbox</b>
+          <b style={{ fontFamily: 'var(--font-display)', fontSize: 16 }}>Your AI Agents at work</b>
         </div>
         <Badge tone="success-solid" size="sm" dot>Live</Badge>
       </div>
       <motion.div variants={staggerSlow} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ padding: 16, display: 'flex', flexDirection: 'column', gap: 10 }}>
-        {feed.map(([Icon, t, d, tone], i) => (
+        {feed.map(([Icon, t, d, tone, label], i) => (
           <motion.div key={i} variants={fadeUp} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', border: '1px solid var(--border-subtle)', borderRadius: 12 }}>
             <span style={{ width: 38, height: 38, flexShrink: 0, borderRadius: 10, background: 'var(--brand-subtle)', color: 'var(--text-brand)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Icon size={18} /></span>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontSize: 14, fontWeight: 600 }}>{t}</div>
               <div style={{ fontSize: 13, color: 'var(--text-muted)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{d}</div>
             </div>
-            <Badge tone={tone} size="sm">AI replied</Badge>
+            <Badge tone={tone} size="sm">{label}</Badge>
           </motion.div>
         ))}
         <motion.div variants={fadeUp} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '12px 14px', background: 'var(--brand-subtle)', borderRadius: 12, color: 'var(--text-brand)' }}>
@@ -62,15 +62,15 @@ export default function Hero() {
         style={{ alignItems: 'center', padding: '72px 24px 84px' }}
       >
         <motion.div variants={fadeUp}>
-          <Badge tone="primary-light" size="lg" dot>AI lead automation for real estate</Badge>
+          <Badge tone="primary-light" size="lg" dot>AI-native. Not a CRM.</Badge>
           <h1 className="hero-title">
-            Never lose a<br />property deal <span style={{ color: 'var(--text-brand)' }}>again</span>
+            AI Agents for every <span style={{ color: 'var(--text-brand)' }}>call and chat.</span>
           </h1>
           <p className="hero-sub" style={{ color: 'var(--text-body)', margin: '20px 0 14px', maxWidth: 520 }}>
-            Probe captures every lead from WhatsApp, calls, portals and referrals, replies in seconds and follows up on autopilot — so hot buyers never go cold.
+            Turn your business number into an AI-powered lead machine. Probe's WhatsApp Agent and AI Calling Agent capture every lead, reply instantly and follow up on autopilot — so hot buyers never go cold.
           </p>
           <p style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 18, color: 'var(--text-primary)', marginBottom: 26 }}>
-            Capture. Engage. Convert. <span style={{ color: 'var(--text-brand)' }}>Automatically.</span>
+            Two AI Agents. One dashboard. <span style={{ color: 'var(--text-brand)' }}>Zero missed leads.</span>
           </p>
           <div style={{ display: 'flex', gap: 12, marginBottom: 30, flexWrap: 'wrap' }}>
             <Button variant="primary" size="xl" icon={<ArrowRight size={20} />} href={DEMO_URL}>Book your free demo</Button>
