@@ -25,7 +25,7 @@ function HeroPanel() {
   const theme = useTheme();
   return (
     <motion.div variants={slideLeft}>
-    <BorderBeam size="md" colorVariant="ocean" theme={theme} strength={0.6} borderRadius={16}>
+    <BorderBeam size="md" colorVariant="ocean" theme={theme} strength={0.6} borderRadius={16} style={{ width: '100%', minWidth: 0 }}>
     <div
       style={{ background: 'var(--surface)', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-lg)', overflow: 'hidden' }}
     >

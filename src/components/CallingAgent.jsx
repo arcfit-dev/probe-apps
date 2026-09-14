@@ -211,7 +211,7 @@ export default function CallingAgent() {
               </motion.div>
             )}
           </AnimatePresence>
-          <BorderBeam size="md" colorVariant="ocean" theme="dark" strength={0.55} borderRadius={44}>
+          <BorderBeam size="md" colorVariant="ocean" theme="dark" strength={0.55} borderRadius={44} style={{ width: '100%', minWidth: 0 }}>
           <div
             style={{ width: '100%', aspectRatio: '1/2', background: '#0B2036', borderRadius: 44, padding: 12, boxShadow: '0 24px 60px rgba(0,0,0,.4)', border: '1px solid rgba(255,255,255,.08)' }}
           >

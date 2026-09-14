@@ -59,7 +59,7 @@ export default function Pricing() {
           {plans.map(p => (
             <motion.div key={p.name} variants={fadeUp} style={{ height: '100%' }}>
             {p.featured ? (
-              <BorderBeam size="md" colorVariant="ocean" theme={theme} strength={0.6} borderRadius={16}>
+              <BorderBeam size="md" colorVariant="ocean" theme={theme} strength={0.6} borderRadius={16} style={{ width: '100%', minWidth: 0 }}>
                 <PlanCard p={p} />
               </BorderBeam>
             ) : (
