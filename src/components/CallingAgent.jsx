@@ -198,36 +198,30 @@ export default function CallingAgent() {
             transition={{ duration: 0.4, ease: 'easeOut' }}
             style={{ width: '100%', maxWidth: 330, position: 'relative', zIndex: 1 }}
           >
+          <AnimatePresence>
+            {showOutcome && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.6, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.6 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 18 }}
+                style={{ position: 'absolute', top: -14, right: 4, zIndex: 10, background: 'linear-gradient(135deg,#1E73D8,#4BA3F0)', color: '#fff', borderRadius: 12, padding: '8px 12px', fontSize: 11.5, fontWeight: 700, boxShadow: '0 8px 20px rgba(30,115,216,.4)', display: 'flex', alignItems: 'center', gap: 6, maxWidth: 150, whiteSpace: 'nowrap' }}
+              >
+                <Sparkles size={14} /> {scenario.insight}
+              </motion.div>
+            )}
+          </AnimatePresence>
           <BorderBeam size="md" colorVariant="ocean" theme="dark" strength={0.55} borderRadius={44}>
           <div
             style={{ width: '100%', aspectRatio: '1/2', background: '#0B2036', borderRadius: 44, padding: 12, boxShadow: '0 24px 60px rgba(0,0,0,.4)', border: '1px solid rgba(255,255,255,.08)' }}
           >
             <div style={{ position: 'absolute', top: 20, left: '50%', transform: 'translateX(-50%)', width: 120, height: 26, background: '#0B2036', borderRadius: 14, zIndex: 3 }} />
 
-            <AnimatePresence>
-              {showOutcome && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.6, y: 10 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.6 }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 18 }}
-                  style={{ position: 'absolute', top: -14, right: -10, zIndex: 5, background: 'linear-gradient(135deg,#1E73D8,#4BA3F0)', color: '#fff', borderRadius: 12, padding: '8px 12px', fontSize: 11.5, fontWeight: 700, boxShadow: '0 8px 20px rgba(30,115,216,.4)', display: 'flex', alignItems: 'center', gap: 6, maxWidth: 150 }}
-                >
-                  <Sparkles size={14} /> {scenario.insight}
-                </motion.div>
-              )}
-            </AnimatePresence>
-
             <div style={{ width: '100%', height: '100%', borderRadius: 34, overflow: 'hidden', display: 'flex', flexDirection: 'column', background: 'linear-gradient(180deg,#132C4A 0%,#0B2036 100%)' }}>
               <div style={{ padding: '38px 16px 14px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
-                <div style={{ position: 'relative', width: 64, height: 64 }}>
-                  <div style={{ position: 'absolute', inset: -10, opacity: 0.85 }}>
-                    <ThinkingOrb state={orbState} size={64} theme="dark" />
-                  </div>
+                <div style={{ position: 'relative', width: 64, height: 64, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   {status === 'ringing' && <RingPulse />}
-                  <div style={{ width: 64, height: 64, borderRadius: '50%', background: 'linear-gradient(135deg,#1E73D8,#4BA3F0)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: 20, fontWeight: 700, position: 'relative' }}>
-                    {scenario.name.split(' ').map((w) => w[0]).join('')}
-                  </div>
+                  <ThinkingOrb state={orbState} size={64} theme="dark" />
                 </div>
                 <div style={{ textAlign: 'center' }}>
                   <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 16, color: '#fff' }}>{scenario.name}</div>
