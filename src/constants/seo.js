@@ -1,7 +1,7 @@
 export const SEO = {
-  siteName: 'Probe App',
+  siteName: 'Probe AI',
   siteUrl: 'https://probeapps.com',
-  title: 'Probe App — AI WhatsApp & Calling Agents for Real Estate Brokers',
+  title: 'Probe AI — AI WhatsApp & Calling Agents for Real Estate Brokers',
   description:
     'Probe turns your business number into an AI-powered lead machine. WhatsApp AI Agent and AI Calling Agent capture every lead, reply instantly and follow up automatically — all on one dashboard.',
   keywords: [
@@ -31,7 +31,7 @@ export const SEO = {
 
 export const FAQ_DATA = [
   {
-    q: 'What is Probe App?',
+    q: 'What is Probe AI?',
     a: "Probe turns your business number into an AI-powered lead machine. It's not a CRM — it's two AI Agents (a WhatsApp AI Agent and an AI Calling Agent) that capture leads, reply and follow up automatically, both feeding one personalised dashboard.",
   },
   {

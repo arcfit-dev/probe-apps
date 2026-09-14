@@ -10,7 +10,7 @@ export function ProbeLogo({ white = false, width = 150 }) {
     <div style={{ display: 'flex', alignItems: 'center', gap, flexShrink: 0 }}>
       <img
         src={logo}
-        alt="Probe App logo"
+        alt="Probe AI logo"
         width={iconSize}
         height={iconSize}
         style={{ borderRadius: 8 * scale, flexShrink: 0 }}
@@ -24,7 +24,7 @@ export function ProbeLogo({ white = false, width = 150 }) {
           whiteSpace: 'nowrap',
         }}
       >
-        Probe App
+        Probe AI
       </span>
     </div>
   );
@@ -34,7 +34,7 @@ export function ProbeMark({ size = 32 }) {
   return (
     <img
       src={logo}
-      alt="Probe App"
+      alt="Probe AI"
       width={size}
       height={size}
       style={{ borderRadius: size * 0.25, flexShrink: 0 }}
