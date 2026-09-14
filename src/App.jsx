@@ -4,6 +4,7 @@ import Trust from './components/Trust';
 import Problem from './components/Problem';
 import Opportunity from './components/Opportunity';
 import Solution from './components/Solution';
+import Integrations from './components/Integrations';
 import WhatsAppDemo from './components/WhatsAppDemo';
 import CallingAgent from './components/CallingAgent';
 import LiveExample from './components/LiveExample';
@@ -28,6 +29,7 @@ export default function App() {
         <Problem />
         <Opportunity />
         <Solution />
+        <Integrations />
         <WhatsAppDemo />
         <CallingAgent />
         <LiveExample />
