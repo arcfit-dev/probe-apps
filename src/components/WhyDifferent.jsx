@@ -4,7 +4,7 @@ import SectionHead from './SectionHead';
 import { fadeUp, scaleUp, staggerContainer, viewportOnce } from '../hooks/useAnimations';
 import useBreakpoint from '../hooks/useBreakpoint';
 
-const rows = ['Built for real estate workflows', 'Automation-first (not just tracking)', 'Instant responses & follow-ups', 'Easy to use, quick setup', 'Built for conversions'];
+const rows = ['Real AI Agents (not just scripted bots)', 'Built for real estate workflows', 'Instant responses & follow-ups', 'Easy to use, quick setup', 'Built for conversions'];
 const cols = ['Excel', 'Manual WhatsApp', 'Generic CRMs', 'Probe'];
 const cells = [['x', 'x', '~', 'y'], ['x', 'x', '~', 'y'], ['x', 'x', '~', 'y'], ['x', 'x', '~', 'y'], ['x', 'x', '~', 'y']];
 
@@ -21,7 +21,7 @@ function MobileCards() {
         <motion.div
           key={r}
           variants={fadeUp}
-          style={{ background: '#fff', borderRadius: 14, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)', overflow: 'hidden' }}
+          style={{ background: 'var(--surface)', borderRadius: 14, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)', overflow: 'hidden' }}
         >
           <div style={{ padding: '14px 16px', fontWeight: 600, fontSize: 15, borderBottom: '1px solid var(--border-subtle)' }}>{r}</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)' }}>
@@ -48,7 +48,7 @@ function MobileCards() {
 
 function DesktopTable() {
   return (
-    <motion.div variants={scaleUp} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ background: '#fff', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-md)', overflow: 'hidden' }}>
+    <motion.div variants={scaleUp} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ background: 'var(--surface)', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-md)', overflow: 'hidden' }}>
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>

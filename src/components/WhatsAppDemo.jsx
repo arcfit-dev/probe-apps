@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ThinkingOrb } from 'thinking-orbs';
 import { Zap, Globe, Home, Calendar, ArrowRight, ChevronLeft, Video, Phone, Send } from 'lucide-react';
 import { ProbeMark } from './ProbeLogo';
 import SectionHead from './SectionHead';
@@ -71,15 +72,8 @@ function TypingDots() {
       exit={{ opacity: 0, scale: 0.9 }}
       style={{ display: 'flex', justifyContent: 'flex-start' }}
     >
-      <div style={{ background: '#fff', borderRadius: 10, borderTopLeftRadius: 2, padding: '10px 12px', display: 'flex', gap: 4, boxShadow: '0 1px 1px rgba(0,0,0,.08)' }}>
-        {[0, 0.2, 0.4].map((d, i) => (
-          <motion.span
-            key={i}
-            animate={{ opacity: [0.3, 1, 0.3], y: [0, -3, 0] }}
-            transition={{ duration: 1.2, repeat: Infinity, delay: d }}
-            style={{ width: 7, height: 7, borderRadius: '50%', background: '#90A4AE', display: 'inline-block' }}
-          />
-        ))}
+      <div style={{ background: '#fff', borderRadius: 10, borderTopLeftRadius: 2, padding: '4px 10px', display: 'flex', alignItems: 'center', boxShadow: '0 1px 1px rgba(0,0,0,.08)' }}>
+        <ThinkingOrb state="composing" size={20} theme="light" />
       </div>
     </motion.div>
   );
@@ -118,14 +112,14 @@ export default function WhatsAppDemo() {
   }, [messages, typing]);
 
   return (
-    <section className="section-pad" style={{ background: 'linear-gradient(180deg,#fff 0%,var(--brand-subtle) 100%)' }}>
+    <section className="section-pad" style={{ background: 'linear-gradient(180deg,var(--bg-page) 0%,var(--brand-subtle) 100%)' }}>
       <div className="wrap grid-2col" style={{ gap: 56, alignItems: 'center' }}>
         <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={viewportOnce}>
           <SectionHead eyebrow="AI chat in action" title="Watch Probe close a lead on WhatsApp" sub="From first hello to a booked site visit — your AI assistant handles the entire conversation, instantly." />
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             {bullets.map(([Icon, t]) => (
               <motion.div key={t} variants={fadeUp} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                <span style={{ width: 40, height: 40, borderRadius: 10, background: '#fff', boxShadow: 'var(--shadow-sm)', color: 'var(--text-brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}><Icon size={18} /></span>
+                <span style={{ width: 40, height: 40, borderRadius: 10, background: 'var(--surface)', boxShadow: 'var(--shadow-sm)', color: 'var(--text-brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}><Icon size={18} /></span>
                 <span style={{ fontSize: 16, fontWeight: 600 }}>{t}</span>
               </motion.div>
             ))}

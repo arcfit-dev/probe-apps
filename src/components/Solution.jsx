@@ -5,17 +5,17 @@ import { fadeUp, scaleUp, staggerContainer, staggerFast, viewportOnce } from '..
 
 const steps = [
   [Download, 'Lead', 'Captured from WhatsApp, calls, website, portals & referrals — automatically.'],
-  [MessageCircle, 'Instant reply', 'AI replies in seconds, qualifies the buyer and shares matching listings.'],
-  [RefreshCw, 'Smart follow-up', "AI follows up at the right time with the right message until they're ready."],
-  [Calendar, 'Visit / meeting', 'Probe books the site visit and keeps the buyer engaged.'],
-  [Briefcase, 'Deal closure', 'You get alerted the moment a lead is hot, and close more — consistently.'],
+  [MessageCircle, 'WhatsApp Agent replies', 'Your WhatsApp AI Agent replies in seconds, qualifies the buyer and shares matching listings.'],
+  [RefreshCw, 'Voice Agent follows up', "Your AI Calling Agent follows up by call or message at the right time until they're ready."],
+  [Calendar, 'Visit / meeting', 'Your AI Agents book the site visit and keep the buyer engaged.'],
+  [Briefcase, 'Deal closure', 'You get alerted on your dashboard the moment a lead is hot, and close more — consistently.'],
 ];
 
 export default function Solution() {
   return (
     <section id="solution" className="section-pad">
       <div className="wrap">
-        <SectionHead center eyebrow="Our solution" title="Your 24/7 AI sales assistant" sub="Automate every step from first message to closed deal. One platform, fully automated, built for real estate brokers." />
+        <SectionHead center eyebrow="Our solution" title="Two AI Agents, working 24/7" sub="Your WhatsApp AI Agent and AI Calling Agent handle every step from first message to closed deal — both feeding one dashboard, built for real estate brokers." />
         <motion.div className="flow-steps" variants={staggerFast} initial="hidden" whileInView="visible" viewport={viewportOnce}>
           {steps.map(([Icon, t, d], i) => (
             <motion.div key={t} style={{ display: 'contents' }}>
@@ -23,7 +23,7 @@ export default function Solution() {
                 variants={fadeUp}
                 whileHover={{ y: -6, boxShadow: 'var(--shadow-md)' }}
                 transition={{ duration: 0.25 }}
-                style={{ flex: 1, textAlign: 'center', padding: 22, background: '#fff', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}
+                style={{ flex: 1, textAlign: 'center', padding: 22, background: 'var(--surface)', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)' }}
               >
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 14 }}>
                   <span style={{ position: 'relative', width: 54, height: 54, borderRadius: 14, background: 'var(--brand-subtle)', color: 'var(--text-brand)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -56,7 +56,7 @@ export default function Solution() {
           style={{ marginTop: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, background: '#0E2647', borderRadius: 16, padding: '18px 28px', color: '#fff' }}
         >
           <CheckCircle size={20} style={{ color: 'var(--success-500)' }} />
-          <span className="solution-bar-text">One platform. Fully automated. More engagement, more visits, more closures.</span>
+          <span className="solution-bar-text">Two AI Agents, one dashboard. More engagement, more visits, more closures.</span>
         </motion.div>
       </div>
     </section>

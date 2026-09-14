@@ -34,7 +34,7 @@ export default function Features() {
       <div className="wrap">
         <SectionHead center eyebrow="Key features" title="Everything you need to capture, engage & close" sub="All the tools brokers need on one platform that works 24/7 for you." />
 
-        <motion.div variants={scaleUp} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ background: '#fff', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-lg)', overflow: 'hidden', marginBottom: 40 }}>
+        <motion.div variants={scaleUp} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ background: 'var(--surface)', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-lg)', overflow: 'hidden', marginBottom: 40 }}>
           <div className="grid-sidebar">
             <div style={{ background: '#0E2647', padding: '20px 16px', color: '#fff' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 22 }}><ProbeLogo white width={96} /></div>
@@ -85,7 +85,7 @@ export default function Features() {
               variants={fadeUp}
               whileHover={{ y: -6, boxShadow: 'var(--shadow-lg)' }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              style={{ padding: 26, background: '#fff', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)', cursor: 'default' }}
+              style={{ padding: 26, background: 'var(--surface)', borderRadius: 16, border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-sm)', cursor: 'default' }}
             >
               <span style={{ width: 46, height: 46, borderRadius: 12, background: 'var(--brand-subtle)', color: 'var(--text-brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 14 }}><Icon size={20} /></span>
               <h3 style={{ fontSize: 18, marginBottom: 8 }}>{t}</h3>

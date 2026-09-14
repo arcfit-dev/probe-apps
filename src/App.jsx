@@ -5,6 +5,7 @@ import Problem from './components/Problem';
 import Opportunity from './components/Opportunity';
 import Solution from './components/Solution';
 import WhatsAppDemo from './components/WhatsAppDemo';
+import CallingAgent from './components/CallingAgent';
 import LiveExample from './components/LiveExample';
 import Features from './components/Features';
 import Benefits from './components/Benefits';
@@ -28,6 +29,7 @@ export default function App() {
         <Opportunity />
         <Solution />
         <WhatsAppDemo />
+        <CallingAgent />
         <LiveExample />
         <Features />
         <Benefits />

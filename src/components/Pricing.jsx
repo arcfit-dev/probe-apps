@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
+import { BorderBeam } from 'border-beam';
 import { Send, Star, Briefcase, Clock, Calendar, Unlock, Headphones, Shield } from 'lucide-react';
 import SectionHead from './SectionHead';
 import Badge from './Badge';
 import Button from './Button';
 import { DASH_URL } from '../constants/links';
 import { fadeUp, staggerContainer, viewportOnce } from '../hooks/useAnimations';
+import useTheme from '../hooks/useTheme';
 
 const plans = [
   { name: 'Starter', Icon: Send, tone: 'var(--brand)', desc: 'Perfect for solo agents getting started.', variant: 'grey' },
@@ -14,7 +16,38 @@ const plans = [
 
 const perks = [[Calendar, '14-day free trial'], [Unlock, 'No long-term contracts'], [Headphones, 'Priority support'], [Shield, '100% secure & reliable']];
 
+function PlanCard({ p }) {
+  return (
+    <motion.div
+      whileHover={{ y: -8, boxShadow: 'var(--shadow-lg)' }}
+      transition={{ duration: 0.3 }}
+      style={{
+        height: '100%',
+        background: 'var(--surface)', borderRadius: 16, overflow: 'hidden', display: 'flex', flexDirection: 'column',
+        border: p.featured ? '2px solid var(--brand)' : '1px solid var(--border-subtle)',
+        boxShadow: p.featured ? 'var(--shadow-lg)' : 'var(--shadow-sm)',
+      }}
+    >
+      {p.featured && <div style={{ background: 'var(--brand)', color: '#fff', textAlign: 'center', padding: 8, fontSize: 12, fontWeight: 700, letterSpacing: '.05em' }}>MOST POPULAR</div>}
+      <div style={{ padding: 32, display: 'flex', flexDirection: 'column', flex: 1 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
+          <span style={{ width: 46, height: 46, borderRadius: 12, background: 'var(--brand-subtle)', color: p.tone, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><p.Icon size={20} /></span>
+          <h3 style={{ fontSize: 22 }}>{p.name}</h3>
+        </div>
+        <p style={{ fontSize: 14, color: 'var(--text-body)', marginBottom: 24 }}>{p.desc}</p>
+        <div style={{ background: 'var(--neutral-1300)', borderRadius: 14, padding: 24, textAlign: 'center', marginBottom: 24 }}>
+          <div style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 4 }}>Pricing</div>
+          <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 22 }}>Yet to be announced</div>
+          <div style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 4 }}>We're working on something exciting for you.</div>
+        </div>
+        <Button variant={p.variant} size="lg" full style={{ marginTop: 'auto' }} href={DASH_URL}>Join waitlist</Button>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function Pricing() {
+  const theme = useTheme();
   return (
     <section id="pricing" className="section-pad">
       <div className="wrap">
@@ -24,31 +57,14 @@ export default function Pricing() {
         </div>
         <motion.div className="grid-3col" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce} style={{ alignItems: 'stretch' }}>
           {plans.map(p => (
-            <motion.div
-              key={p.name}
-              variants={fadeUp}
-              whileHover={{ y: -8, boxShadow: 'var(--shadow-lg)' }}
-              transition={{ duration: 0.3 }}
-              style={{
-                background: '#fff', borderRadius: 16, overflow: 'hidden', display: 'flex', flexDirection: 'column',
-                border: p.featured ? '2px solid var(--brand)' : '1px solid var(--border-subtle)',
-                boxShadow: p.featured ? 'var(--shadow-lg)' : 'var(--shadow-sm)',
-              }}
-            >
-              {p.featured && <div style={{ background: 'var(--brand)', color: '#fff', textAlign: 'center', padding: 8, fontSize: 12, fontWeight: 700, letterSpacing: '.05em' }}>MOST POPULAR</div>}
-              <div style={{ padding: 32, display: 'flex', flexDirection: 'column', flex: 1 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
-                  <span style={{ width: 46, height: 46, borderRadius: 12, background: 'var(--brand-subtle)', color: p.tone, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><p.Icon size={20} /></span>
-                  <h3 style={{ fontSize: 22 }}>{p.name}</h3>
-                </div>
-                <p style={{ fontSize: 14, color: 'var(--text-body)', marginBottom: 24 }}>{p.desc}</p>
-                <div style={{ background: 'var(--neutral-1300)', borderRadius: 14, padding: 24, textAlign: 'center', marginBottom: 24 }}>
-                  <div style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 4 }}>Pricing</div>
-                  <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 22 }}>Yet to be announced</div>
-                  <div style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 4 }}>We're working on something exciting for you.</div>
-                </div>
-                <Button variant={p.variant} size="lg" full style={{ marginTop: 'auto' }} href={DASH_URL}>Join waitlist</Button>
-              </div>
+            <motion.div key={p.name} variants={fadeUp} style={{ height: '100%' }}>
+            {p.featured ? (
+              <BorderBeam size="md" colorVariant="ocean" theme={theme} strength={0.6} borderRadius={16}>
+                <PlanCard p={p} />
+              </BorderBeam>
+            ) : (
+              <PlanCard p={p} />
+            )}
             </motion.div>
           ))}
         </motion.div>

@@ -4,7 +4,7 @@ import { buttonTap } from '../hooks/useAnimations';
 const variants = {
   primary: { background: 'var(--brand)', color: '#fff' },
   grey: { background: 'var(--neutral-1300)', color: 'var(--text-primary)' },
-  light: { background: '#fff', color: 'var(--text-primary)' },
+  light: { background: 'var(--surface)', color: 'var(--text-primary)' },
   link: { background: 'none', color: 'var(--text-body)' },
 };
 

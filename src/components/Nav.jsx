@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { ArrowRight, Menu, X } from 'lucide-react';
 import { ProbeLogo } from './ProbeLogo';
 import Button from './Button';
+import ThemeToggle from './ThemeToggle';
 import { DASH_URL, DEMO_URL } from '../constants/links';
 import { fadeDown, viewportOnce } from '../hooks/useAnimations';
 import useBreakpoint from '../hooks/useBreakpoint';
@@ -27,7 +28,7 @@ export default function Nav() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       style={{
         position: 'sticky', top: 0, zIndex: 40,
-        background: 'rgba(255,255,255,.85)', backdropFilter: 'blur(12px)',
+        background: 'var(--nav-bg)', backdropFilter: 'blur(12px)',
         borderBottom: '1px solid var(--border-subtle)', boxShadow: shadow,
       }}
     >
@@ -46,17 +47,20 @@ export default function Nav() {
           </nav>
         </div>
         <div className="nav-desktop" style={{ alignItems: 'center', gap: 12 }}>
+          <ThemeToggle size={36} />
           <Button variant="link" href={DASH_URL}>Sign in</Button>
           <Button variant="primary" icon={<ArrowRight size={18} />} href={DEMO_URL}>Book a demo</Button>
         </div>
-        <button
-          className="nav-hamburger"
-          onClick={() => setMenuOpen(o => !o)}
-          style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, color: 'var(--text-primary)', alignItems: 'center', justifyContent: 'center' }}
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="nav-hamburger" style={{ alignItems: 'center', gap: 8 }}>
+          <ThemeToggle size={34} />
+          <button
+            onClick={() => setMenuOpen(o => !o)}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 8, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -66,7 +70,7 @@ export default function Nav() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            style={{ overflow: 'hidden', background: '#fff', borderTop: '1px solid var(--border-subtle)' }}
+            style={{ overflow: 'hidden', background: 'var(--surface)', borderTop: '1px solid var(--border-subtle)' }}
           >
             <div style={{ padding: '16px 24px 24px', display: 'flex', flexDirection: 'column', gap: 8 }}>
               {links.map(([l, h], i) => (

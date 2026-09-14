@@ -1,4 +1,4 @@
-# Probe App — AI Lead Automation for Real Estate Brokers
+# Probe AI — AI Lead Automation for Real Estate Brokers
 
 > Probe captures leads from WhatsApp, calls, property portals and referrals, replies in seconds with AI, and follows up automatically — so real estate brokers never lose a deal to poor follow-up again.
 
@@ -8,7 +8,7 @@
 
 ## What Probe Does
 
-Probe App is a SaaS platform that automates the entire lead lifecycle for real estate brokers:
+Probe AI is a SaaS platform that automates the entire lead lifecycle for real estate brokers:
 
 1. Lead Capture — Automatically captures leads from WhatsApp, missed calls, property portals (99acres, MagicBricks), website forms, email and referrals into a single unified inbox.
 2. Instant AI Replies — AI responds to every inquiry in seconds, qualifies buyers and shares matching property listings.
@@ -28,8 +28,8 @@ Probe App is a SaaS platform that automates the entire lead lifecycle for real e
 
 ## FAQ
 
-Q: What is Probe App?
-A: Probe App is an AI-powered lead automation platform built specifically for real estate brokers. It captures leads from all channels, responds instantly with AI, and follows up automatically until the deal closes.
+Q: What is Probe AI?
+A: Probe AI is an AI-powered lead automation platform built specifically for real estate brokers. It captures leads from all channels, responds instantly with AI, and follows up automatically until the deal closes.
 
 Q: How does Probe capture leads?
 A: Probe connects to WhatsApp, missed calls, property portals, website inquiries, email and referrals — funnelling every lead into a single unified inbox automatically.
