@@ -64,7 +64,7 @@ export default function Hero() {
         <motion.div variants={fadeUp}>
           <Badge tone="primary-light" size="lg" dot>AI-native. Not a CRM.</Badge>
           <h1 className="hero-title">
-            AI Agents for every <span style={{ color: 'var(--text-brand)' }}>call and chat.</span>
+            Every lead answered. Every call returned. <span style={{ color: 'var(--text-brand)' }}>Automatically.</span>
           </h1>
           <p className="hero-sub" style={{ color: 'var(--text-body)', margin: '20px 0 14px', maxWidth: 520 }}>
             Turn your business number into an AI-powered lead machine. Probe's WhatsApp Agent and AI Calling Agent capture every lead, reply instantly and follow up on autopilot — so hot buyers never go cold.
